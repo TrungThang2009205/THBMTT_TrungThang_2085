@@ -20,7 +20,7 @@ def caesar_encrypt():
     key = int(request.form['inputKeyPlain'])
     Caesar = CaesarCipher()
 
-    encrypted_text = Caesar.encrypt(text, key)
+    encrypted_text = Caesar.encrypt_text(text, key)
     return f"text: {text}<br>key: {key}<br>encrypted text: {encrypted_text}"
 
 
@@ -30,7 +30,7 @@ def caesar_decrypt():
     key = int(request.form['inputKeyCipher'])
     Caesar = CaesarCipher()
 
-    decrypted_text = Caesar.decrypt(text, key)
+    decrypted_text = Caesar.decrypt_text(text, key)
     return f"text: {text}<br>key: {key}<br>decrypted text: {decrypted_text}"
 
 
